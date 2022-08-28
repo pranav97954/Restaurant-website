@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("image/b1.jpg");
+    background-size: 280%;
+    background-position: -400px 0px;
+    color: aliceblue;
+}
+
+.navbar{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.menuright{
+    text-align: right;
+}
+.logo{
+     height: 45px;
+     float: left;
+         
+}
+ul li{
+    display: inline-block;
+    margin: 5px;
+    list-style: none;
+}
+span{
+    margin: 0 10px;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+@media only screen and (max-width:700px)
+{
+    span{
+        display: block;
+    }
+    ul li{
+        display: block;
+    }
+    ul{
+        display: none;
+    }
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease; 
+}
+ul li a:hover{
+    color: blue;
+}
+
+
+.main{
+    width: 400px;
+    margin:100px auto 0px auto;
+}
+h2{
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+}
+#contact{
+    margin: 40px;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+#name{
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+#submit{
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(250,100,0,0.8);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}

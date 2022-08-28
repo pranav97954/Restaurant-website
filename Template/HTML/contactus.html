@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'CSS/contactus.css'%}">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><h2>Sw</h2></div>
+        <div class="menuright">
+            <span onclick="myonclickfunction()">&#9776;</span>
+            <ul id="menu">
+                <li><a href="http://localhost:8000/aero/restaurant/">HOME</a></li>
+                <li><a href="http://localhost:8000/aero/order/">ORDER</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact" method="post" action="http://localhost:8000/aero/savecontactus/">
+                {% csrf_token %}
+                <label>First Name : </label>
+                <br>
+                <input type="text" name="fname" id="name" placeholder="Enter Your First Name">
+                <br><br>
+                <label>Last Name : </label>
+                <br>
+                <input type="text" name="lname" id="name" placeholder="Enter Your Last Name">
+                <br><br>
+                <label>Phone Number : </label>
+                <br>
+                <input type="number" name="pnumber" id="name" placeholder="Enter Your Phone Number">
+                <br><br>
+                <label>Email Address : </label>
+                <br>
+                <input type="email" name="email" id="name" placeholder="Enter Your Valid Email Address">
+                <br><br>
+                <textarea type="text" id="name" name="message" cols="auto" rows="5" placeholder="Message"></textarea>
+                <br><br>
+                <input type="submit" value="Submit" name="submit" id="submit">
+            </form>
+        </div>
+    </div>
+    <script>
+        function myonclickfunction()
+        {
+            var x = document.getElementById("menu");
+
+            if(x.style.display== "block")
+            {
+                x.style.display = "none";
+            }
+            else{
+                x.style.display = "block";
+            }
+
+        }
+    </script>
+</body>
+</html>

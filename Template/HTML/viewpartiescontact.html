@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViewPartiesContact</title>
+</head>
+<body>
+    <h1>View Parties Contact</h1>
+    {% for parties in part %} 
+      <h3>{{parties.number}}</h3>
+      <h3>{{parties.name}}</h3>
+      <h3>{{parties.numofguest}}</h3>
+      <h3>{{parties.evname}}</h3>
+      <h3>{{parties.da}}</h3>
+      <h3>{{parties.startti}}</h3>
+      <h3>{{parties.endti}}</h3>
+      <h3>{{parties.pnumber}}</h3>
+      <h3>{{parties.emails2}}</h3>
+      <p>{{parties.messages2}}</p>
+    {% endfor %}
+</body>
+</html>

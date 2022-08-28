@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViewContact</title>
+</head>
+<body>
+    <h1>View Contact</h1>
+    {% for con in cont %}
+      <h2>{{con.number}}</h2>
+      <h2>{{con.firstname}}</h2>
+      <h2>{{con.lastname}}</h2>
+      <h2>{{con.phonenumber}}</h2>
+      <h2>{{con.emails}}</h2>
+      <p>{{con.messages}}</p>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'CSS/menu.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><h2>Sw</h2></div>
+        <div class="menuright">
+            <span onclick="myonclickfunction()">&#9776;</span>
+            <ul id="menu">
+                <li><a href="http://localhost:8000/aero/restaurant/">HOME</a></li>
+                <li><a href="http://localhost:8000/aero/order/">ORDER</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="shop" id="shop">
+  
+    </div>
+    <h1 class="heading">Drink</h1>
+    <div class="shop" id="drink">
+
+    </div>
+</body>
+<script src="{%static 'javascript/menudata.js'%}"></script>
+<script src="{%static 'javascript/menu.js'%}"></script>
+</html>

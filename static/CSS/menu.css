@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: aliceblue;
+    background-color: rgb(55, 54, 54);
+}
+.navbar{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.menuright{
+    text-align: right;
+}
+.logo{
+     height: 35px;
+     float: left;         
+}
+ul li{
+    display: inline-block;
+    margin: 5px;
+    list-style: none;
+}
+span{
+    margin: 0 10px;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+@media only screen and (max-width:500px)
+{
+    span{
+        display: block;
+    }
+    ul li{
+        display: block;
+    }
+    ul{
+        display: none;
+    }
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease; 
+}
+ul li a:hover{
+    color: blue;
+}
+.heading{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+}
+/* CSS for Menu & Drink item */
+.shop{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(4,223px);
+    gap: 30px;
+    justify-content: center;
+}
+@media (max-width:1000px){
+    .shop{
+        grid-template-columns: repeat(2,223px);
+    }
+}
+@media (max-width:500px){
+    .shop{
+        grid-template-columns: repeat(1,223px);
+    }
+}
+
+.cart-item{
+    border: 2px solid black;
+    margin-bottom:10px;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+}
+
+.title-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    margin: 5px;
+    color: black;
+    font-size: x-large;
+}
+.cart-item-price{
+    background-color: black;
+    color: white;
+    padding: 4px;
+    border-radius: 5px;
+}
