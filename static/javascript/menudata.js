@@ -1,15 +1,18 @@
 let menuitem=[{
     id:'asd1',
+    width:'100%',
     name:'Burger',
     price:200,
     img: "http://localhost:8000/static/img/g1.jpg",
 },{
     id:'asd2',
+    width:'100%',
     name:'French Fries',
     price:100,
     img: "http://localhost:8000/static/img/g2.jpg"
 },{
     id:'asd3',
+    width:'100%',
     name:'Chilli Cheese',
     price:120,
     img: "http://localhost:8000/static/img/g3.jpg"

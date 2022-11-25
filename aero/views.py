@@ -1,9 +1,12 @@
-from django.shortcuts import render
+import email
+from django.shortcuts import redirect, render
 from aero.models import *
 from django.http import HttpResponseRedirect,HttpResponse
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 def home(request):
-    res=render(request,'HTML/home.html')
+    res=render(request,'HTML/index.html')
     return res
 
 def order(request):
@@ -38,7 +41,7 @@ def contactus_save(request):
     cont.emails=request.POST['email']
     cont.messages=request.POST['message']
     cont.save()
-    res=render(request,'HTML/home.html')
+    res=render(request,'HTML/index.html')
     return res
     
 def viewcontactus(request):
@@ -58,7 +61,7 @@ def parties_save(request):
     part.emails2=request.POST['email1']
     part.messages2=request.POST['Messagesforparty']
     part.save()
-    res=render(request,'HTML/home.html')
+    res=render(request,'HTML/index.html')
     return res
 
 def ViewPartiesContact(request):
@@ -66,6 +69,39 @@ def ViewPartiesContact(request):
     res=render(request,'HTML/viewpartiescontact.html',{'part':part})
     return res
 
-    
+def login(request):
+    res=render(request,'HTML/login.html')  
+    return res  
+
+def signup(request):
+ 
+    if request.method == "POST":
+        #username = username.POST.get('username')
+        #firstname = firstname.POST.get('firstname')
+        #lastname = lastname.POST.get('lastname')
+        #emailid = emailid.POST.get('emailid')
+        #pass1 = pass1.POST.get('pass1')
+        #pass2 = pass2.POST.get('pass2')
+        conta= signinuser()
+        conta.username = request.POST['username']
+        conta.firstname = request.POST['firstname']
+        conta.lastname = request.POST['lastname']
+        conta.emailid = request.POST['emailid']
+        conta.pass1 = request.POST['pass1']
+        conta.pass2 = request.POST['pass2']
+
+        myuser = User.objects.create_user(username,emailid,pass1)
+        myuser.first_name=firstname
+        myuser.last_name=lastname
+        myuser.save()
+
+        messages.success(request,"Your Account has been created Successfully")
+        return redirect('http://localhost:8000/aero/login/')
+
+    res=render(request,'HTML/signup.html')
+    return res
+
+def signout(request):
+    pass
 
 

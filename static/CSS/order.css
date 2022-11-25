@@ -43,24 +43,25 @@ a{
 **/
 .shop{
     display: grid;
-    grid-template-columns: repeat(4,323px);
+    grid-template-columns: repeat(4,223px);
     gap: 30px;
     justify-content: center;
 
 }
-@media (max-width:1000px){
+@media (max-width:800px){
     .shop{
-        grid-template-columns: repeat(2,323px);
+        grid-template-columns: repeat(2,223px);
     }
 }
 @media (max-width:500px){
     .shop{
-        grid-template-columns: repeat(1,323px);
+        grid-template-columns: repeat(1,223px);
     }
 }
 .item{
     border: 2px solid black;
     border-radius: 4px;
+    
 }
 
 .details{

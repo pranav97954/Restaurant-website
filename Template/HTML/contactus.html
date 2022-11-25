@@ -14,8 +14,8 @@
         <div class="menuright">
             <span onclick="myonclickfunction()">&#9776;</span>
             <ul id="menu">
-                <li><a href="http://localhost:8000/aero/restaurant/">HOME</a></li>
-                <li><a href="http://localhost:8000/aero/order/">ORDER</a></li>
+                <li><a href="http://localhost:8000/">HOME</a></li>
+                <li><a href="http://localhost:8000/order/">ORDER</a></li>
             </ul>
         </div>
     </div>
@@ -23,7 +23,7 @@
     <div class="main">
         <div class="contact">
             <h2>Contact Us</h2>
-            <form id="contact" method="post" action="http://localhost:8000/aero/savecontactus/">
+            <form id="contact" method="post" action="http://localhost:8000/savecontactus/" onsubmit="return validate()">
                 {% csrf_token %}
                 <label>First Name : </label>
                 <br>
@@ -59,7 +59,6 @@
             else{
                 x.style.display = "block";
             }
-
         }
     </script>
 </body>

@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: aliceblue;
+    background-color: rgb(55, 54, 54);
+}
+.navbar{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.menuright{
+    text-align: right;
+}
+.logo{
+     height: 35px;
+     float: left;         
+}
+ul li{
+    display: inline-block;
+    margin: 5px;
+    list-style: none;
+}
+span{
+    margin: 0 10px;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+@media only screen and (max-width:500px)
+{
+    span{
+        display: block;
+    }
+    ul li{
+        display: block;
+    }
+    ul{
+        display: none;
+    }
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease; 
+}
+ul li a:hover{
+    color: blue;
+}
+.heading{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+}
