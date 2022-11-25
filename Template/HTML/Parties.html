@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,4 +80,87 @@
         }
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'CSS/contactus.css'%}">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><h2>Sw</h2></div>
+        <div class="menuright">
+            <span onclick="myonclickfunction()">&#9776;</span>
+            <ul id="menu">
+                <li><a href="http://localhost:8000/">HOME</a></li>
+                <li><a href="http://localhost:8000/order/">ORDER</a></li>
+            </ul>
+        </div>
+    </div>
+
+     <div class="main">
+        <div class="contact">
+            <h2>Event Bookings</h2>
+            <form id="contact" method="post" action="http://localhost:8000/partiessave/">
+                {% csrf_token %}
+                <label>Name : </label>
+                <br>
+                <input type="text" name="Name" id="name" placeholder="Enter Your Full Name">
+                <br><br>
+                <label>Number of Guest : </label>
+                <br>
+                <input type="number" name="numberofguest" id="name" placeholder="Enter Number of Guest">
+                <br><br>
+                <label>Event Name : </label>
+                <br>
+                <input type="text" name="eventname" id="name" placeholder="Type of Event">
+                <br><br>
+                <label>Date : </label>
+                <br>
+                <input type="date" name="date" id="name" placeholder="Date of Inquiry">
+                <br><br>
+                <label>Start Time : </label>
+                <br>
+                <input type="time" name="starttime" id="name">
+                <br><br>
+                <label>End Time : </label>
+                <br>
+                <input type="time" name="endtime" id="name">
+                <br><br>
+                <label>Phone Number : </label>
+                <br>
+                <input type="number" name="Pnumber" id="name" placeholder="Enter Your Phone Number">
+                <br><br>
+                <label>Email Address : </label>
+                <br>
+                <input type="email" name="email1" id="name" placeholder="Enter Your Valid Email Address">
+                <br><br>
+                <textarea type="text" id="name" name="Messagesforparty" cols="auto" rows="5" placeholder="Message"></textarea>
+                <br><br>
+                <input type="submit" value="Submit" name="submit" id="submit">
+            </form>
+        </div>
+     </div>
+     <script>
+        function myonclickfunction()
+        {
+            var x = document.getElementById("menu");
+
+            if(x.style.display== "block")
+            {
+                x.style.display = "none";
+            }
+            else{
+                x.style.display = "block";
+            }
+
+        }
+    </script>
+</body>
+>>>>>>> 228408938bcb3ffad784fe3520ffc4fd74872868
 </html>

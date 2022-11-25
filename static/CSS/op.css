@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body{
+    color: aliceblue;
+    background-color: rgb(55, 54, 54);
+}
+.navbar{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.menuright{
+    text-align: right;
+}
+.logo{
+     height: 35px;
+     float: left;         
+}
+h1{
+    text-align: center;
+    margin: 20px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
